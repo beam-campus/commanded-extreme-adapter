@@ -1,4 +1,4 @@
-defmodule Commanded.EventStore.Adapters.Extreme.Mixfile do
+defmodule Commanded.EventStore.Adapters.Extreme.MixProject do
   use Mix.Project
 
   @version "1.1.0"
@@ -7,7 +7,7 @@ defmodule Commanded.EventStore.Adapters.Extreme.Mixfile do
     [
       app: :commanded_extreme_adapter,
       version: @version,
-      elixir: "~> 1.6",
+      elixir: "~> 1.18.0-dev",
       elixirc_paths: elixirc_paths(Mix.env()),
       consolidate_protocols: Mix.env() != :test,
       description: description(),
@@ -37,8 +37,9 @@ defmodule Commanded.EventStore.Adapters.Extreme.Mixfile do
 
   defp deps do
     [
-      {:commanded, "~> 1.2"},
-      {:extreme, "~> 0.13"},
+      {:commanded, github: "beam-campus/commanded", branch: "main", override: true},
+      # {:extreme, "~> 0.13"},
+      {:extreme, github: "beam-campus/extreme", branch: "main", override: true},
 
       # Optional dependencies
       {:jason, "~> 1.2", optional: true},

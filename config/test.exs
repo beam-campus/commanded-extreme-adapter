@@ -1,4 +1,4 @@
-use Mix.Config
+use Config
 
 config :ex_unit,
   capture_log: true,
