@@ -37,9 +37,9 @@ defmodule Commanded.EventStore.Adapters.Extreme.MixProject do
 
   defp deps do
     [
-      {:commanded, github: "beam-campus/commanded", branch: "main", override: true},
+      {:commanded, github: "beam-campus/commanded", branch: "master", override: true},
       # {:extreme, "~> 0.13"},
-      {:extreme, github: "beam-campus/extreme", branch: "main", override: true},
+      {:extreme, github: "beam-campus/extreme", branch: "v1.0.0", override: true},
 
       # Optional dependencies
       {:jason, "~> 1.2", optional: true},
